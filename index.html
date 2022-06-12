@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h2>Weather Dashboard</h2>
+    </header>
+
+    <main class="flex-row justify-space">
+        <section class="city-search col-md-3 col-lg-3">
+            <h3>Search for a City:</h3>
+            <div class="search-bar flex-row justify-space">
+                <input id="search-city" type="text" autofocus="true" class="form-input"/>
+                <button type="search" class="btn">Search</button>
+            </div>
+            <div class="search-history">
+                <ul>
+                    
+                </ul>
+            </div>
+        </section>
+        <section class="city-weather col-md-9 col-lg-9">
+            <div class="weather-now">
+                <div id="city-name">
+                    <h3 class="city-date"> Test City (6/12/2022)</h3>
+                    <ul class="city-info">
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
+                        <li>UV Index:</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="five-forecast">
+                <div class="card-holder">
+                    <h3 class="col-md-9 col-lg-12"> 5-Day Forecast</h3>
+                    <section class="day-card col-lg-2">
+                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <ul class="day-info">
+                            <li>Temp:</li>
+                            <li>Wind:</li>
+                            <li>Humidity:</li>
+                        </ul>
+                    </section>
+
+                    <section class="day-card col-lg-2">
+                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <ul class="day-info">
+                            <li>Temp:</li>
+                            <li>Wind:</li>
+                            <li>Humidity:</li>
+                        </ul>
+                    </section>
+
+                    <section class="day-card col-lg-2">
+                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <ul class="day-info">
+                            <li>Temp:</li>
+                            <li>Wind:</li>
+                            <li>Humidity:</li>
+                        </ul>
+                    </section>
+
+                    <section class="day-card col-lg-2">
+                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <ul class="day-info">
+                            <li>Temp:</li>
+                            <li>Wind:</li>
+                            <li>Humidity:</li>
+                        </ul>
+                    </section>
+
+                    <section class="day-card col-lg-2">
+                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <ul class="day-info">
+                            <li>Temp:</li>
+                            <li>Wind:</li>
+                            <li>Humidity:</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <link rel="script" href="./assets/js/script.js"/>
+</body>
+</html>
