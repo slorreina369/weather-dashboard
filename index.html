@@ -29,12 +29,12 @@
         <section class="city-weather col-md-9 col-lg-9">
             <div class="weather-now">
                 <div id="city-name">
-                    <h3 class="city-date"> Test City (6/12/2022)</h3>
+                    <h3 class="city-date"> Test City (<span class="curent-day"></span>)</h3>
                     <ul class="city-info">
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                        <li>UV Index:</li>
+                        <li>Temp: <span class="temp"></span> &deg;F</li>
+                        <li>Wind: <span class="wind"></span> MPH</li>
+                        <li>Humidity: <span class="humid"></span>%</li>
+                        <li>UV Index: <span class="index"></span></li>
                     </ul>
                 </div>
             </div>
@@ -42,53 +42,55 @@
                 <div class="card-holder">
                     <h3 class="col-md-9 col-lg-12"> 5-Day Forecast</h3>
                     <section class="day-card col-lg-2">
-                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <h5 class="forecast-date"> <span class="forecast-day"></span></h5>
                         <ul class="day-info">
-                            <li>Temp:</li>
-                            <li>Wind:</li>
-                            <li>Humidity:</li>
+                            <li>Temp: <span class="temp"></span> &deg;F</li>
+                            <li>Wind: <span class="wind"></span> MPH</li>
+                            <li>Humidity: <span class="humid"></span>%</li>
                         </ul>
                     </section>
 
                     <section class="day-card col-lg-2">
-                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <h5 class="forecast-date"><span class="forecast-day"></span></h5>
                         <ul class="day-info">
-                            <li>Temp:</li>
-                            <li>Wind:</li>
-                            <li>Humidity:</li>
+                            <li>Temp: <span class="temp"></span> &deg;F</li>
+                            <li>Wind: <span class="wind"></span> MPH</li>
+                            <li>Humidity: <span class="humid"></span>%</li>
                         </ul>
                     </section>
 
                     <section class="day-card col-lg-2">
-                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <h5 class="forecast-date"><span class="forecast-day"></span></h5>
                         <ul class="day-info">
-                            <li>Temp:</li>
-                            <li>Wind:</li>
-                            <li>Humidity:</li>
+                            <li>Temp: <span class="temp"></span> &deg;F</li>
+                            <li>Wind: <span class="wind"></span> MPH</li>
+                            <li>Humidity: <span class="humid"></span>%</li>
                         </ul>
                     </section>
 
                     <section class="day-card col-lg-2">
-                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <h5 class="forecast-date"><span class="forecast-day"></span></h5>
                         <ul class="day-info">
-                            <li>Temp:</li>
-                            <li>Wind:</li>
-                            <li>Humidity:</li>
+                            <li>Temp: <span class="temp"></span> &deg;F</li>
+                            <li>Wind: <span class="wind"></span> MPH</li>
+                            <li>Humidity: <span class="humid"></span>%</li>
                         </ul>
                     </section>
 
                     <section class="day-card col-lg-2">
-                        <h5 class="forecast-date"> 6/12/2022</h5>
+                        <h5 class="forecast-date"><span class="forecast-day"></span></h5>
                         <ul class="day-info">
-                            <li>Temp:</li>
-                            <li>Wind:</li>
-                            <li>Humidity:</li>
+                            <li>Temp: <span class="temp"></span> &deg;F</li>
+                            <li>Wind: <span class="wind"></span> MPH</li>
+                            <li>Humidity: <span class="humid"></span>%</li>
                         </ul>
                     </section>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
