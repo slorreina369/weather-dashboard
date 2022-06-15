@@ -61,16 +61,22 @@ var getLoc = function(city){
 // display the weather information
 var displayWeather = function(city){
     var currentDay = city.current;
+    var date = moment(currentDay.dt * 1000).format('l');
+    console.log(date);
+    $(weatherNow).find(".current-day").text(date);
     $(weatherNow).find(".temp").text(currentDay.temp);
     $(weatherNow).find(".wind").text(currentDay.wind_speed);
     $(weatherNow).find(".humid").text(currentDay.humidity);
     $(weatherNow).find(".index").text(currentDay.uvi);
 
-    var forecastDays = city.daily.slice(0,5);
+    var forecastDays = city.daily.slice(1,6);
     console.log(currentDay);
     for(var i=0; i <forecastDays.length; i++){
         var dayCard = $(".day-card:nth-of-type(" + (i+1) + ")")
         var dayWeather = forecastDays[i];
+        var showDate = moment(dayWeather.dt * 1000).format('l');
+        console.log(showDate);
+        dayCard.find(".forecast-day").text(showDate);
         dayCard.find(".temp").text(dayWeather.temp.day);
         dayCard.find(".wind").text(dayWeather.wind_speed);
         dayCard.find(".humid").text(dayWeather.humidity);
