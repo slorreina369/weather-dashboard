@@ -10,7 +10,6 @@ var cities = [];
 // submit buttont to obtain information placed in search button
 var searchCity = function(city){
     $(weatherNow).find(".current-city").text(city);
-
     if(city){
         getLoc(city)
         .then(function(data){
@@ -19,7 +18,6 @@ var searchCity = function(city){
             var dataLatt = data.latt;
 
             return findWeather(dataLatt, dataLong);
-            
         })
         .then(displayWeather);
         getCity.value = "";
@@ -32,7 +30,7 @@ var searchCity = function(city){
 // this is solely to get the weather api info
 var findWeather = function(lattitude, longitude){
     var cityData = apiBase + lattitude + "&lon=" + longitude + "&units=imperial&exclude=minutely,hourly&appid=" + apiKey;
-
+    
     return fetch(cityData)
     .then(function(response){
         if(response.ok){
@@ -47,7 +45,6 @@ var getLoc = function(city){
     
     return fetch(geoLocate)
     .then(function(response){
-    
         if(response.ok){
             return response.json()
         }else{
@@ -63,7 +60,6 @@ var displayWeather = function(city){
     var currentIcon = currentDay.weather[0].icon;
     var iconUrl = "http://openweathermap.org/img/wn/" + currentIcon + ".png"
 
-    console.log(iconUrl);
     $('#wicon').attr('src', iconUrl);
     $(weatherNow).find(".current-day").text(date);
     $(weatherNow).find(".temp").text(currentDay.temp);
@@ -71,9 +67,7 @@ var displayWeather = function(city){
     $(weatherNow).find(".humid").text(currentDay.humidity);
     $(weatherNow).find(".index").text(currentDay.uvi);
 
-
     var forecastDays = city.daily.slice(1,6);
-    
     for(var i=0; i <forecastDays.length; i++){
         var dayCard = $(".day-card:nth-of-type(" + (i+1) + ")")
         var dayWeather = forecastDays[i];
@@ -91,34 +85,31 @@ var displayWeather = function(city){
     getUvi(currentDay.uvi)
 };
 
+// extracts the data for the uv index and assigns it a color based n its rating
 var getUvi = function(currentUvi){
-
     if(currentUvi <= 2){
-        console.log("favorable");
         $(weatherNow).find(".index").addClass("favorable");
     } else if(currentUvi <=5){
-        console.log("moderate");
         $(weatherNow).find(".index").addClass("moderate");
     } else if(currentUvi >= 6){
-        console.log("severe");
         $(weatherNow).find(".index").addClass("severe");
     };
 };
 
 var saveCity = function(city){
     cities.push(city);
+
     var cityLi = $("<li>");
     var historybtn = $("<button>").text(city);
     $(".search-history > ul").append(cityLi);
     cityLi.append(historybtn);
 
     localStorage.setItem("cities", JSON.stringify(cities));
-
 };
 
 var loadCity = function(){
     cities = JSON.parse(localStorage.getItem("cities"));
-
+    
     if(!cities){
         cities = [];
     };
@@ -136,9 +127,9 @@ searchBtn.addEventListener("click", function(){
     var city = getCity.value.trim();
     searchCity(city);
 });
+
 $(".search-history").on("click", "button", function(event){
     var eventBtn = event.target.innerText
-    searchCity(eventBtn);
-    console.log("button, I win")    
+    searchCity(eventBtn);   
 });
 loadCity();

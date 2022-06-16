@@ -6,6 +6,7 @@
     --first-text-color:#1c1c1c;
     --second-text-color:#fafbfb;
 }
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +31,6 @@ main{
     height: 4vw;
     border: 1px solid var(--first-text-color);
     border-radius: 6px;
-
 }
 .city-search button{
     background-color: var(--forth-color);
@@ -71,7 +71,6 @@ main{
     flex-direction: row;
     border: 1px solid var(--first-text-color);
     height: 15vw;
-
 }
 .day-card ul{
     text-align: left;
