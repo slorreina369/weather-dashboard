@@ -14,7 +14,7 @@ A dashboard set up to search by city and display the weather on different dates
 * geocode.xyz
 
 ## Website
-[Live Website]
+[Live Website] (https://slorreina369.github.io/weather-dashboard/)
 ## Screenshots
 
 ### Dashboard photo
