@@ -89,3 +89,37 @@ main{
 .five-forecast{
     justify-content: left;
 }
+.favorable{
+    background-color: #157e51;
+    color: var(--second-text-color);
+    padding: 8px 15px 8px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.moderate{
+    background-color: yellow;
+    color: var(--second-text-color);
+    padding: 8px 15px 8px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.severe{
+    background-color: red;
+    color: var(--second-text-color);
+    padding: 8px 15px 8px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.search-history ul{
+    padding: 0;
+}
+.search-history li{
+    list-style-type: none;
+    background-color: #b7b7b7;
+    display: inline-block;
+    margin: 8px 0;
+    width: 100%;
+    text-align: center;
+    padding: 9px;
+    border-radius: 8px;
+}
