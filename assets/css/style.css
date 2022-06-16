@@ -43,10 +43,6 @@ main{
     border-top: 3px solid var(--third-color);
     margin-top: 2vw;
 }
-.city-weather{
-    display: block;
-    margin: auto;
-}
 .city-info{
     padding: inherit;
     list-style-type: none;

@@ -10,6 +10,7 @@ var cities = [];
 // submit buttont to obtain information placed in search button
 var searchCity = function(city){
     $(weatherNow).find(".current-city").text(city);
+
     if(city){
         getLoc(city)
         .then(function(data){
@@ -106,6 +107,11 @@ var getUvi = function(currentUvi){
 
 var saveCity = function(city){
     cities.push(city);
+    var cityLi = $("<li>");
+    var historybtn = $("<button>").text(city);
+    $(".search-history > ul").append(cityLi);
+    cityLi.append(historybtn);
+
     localStorage.setItem("cities", JSON.stringify(cities));
 
 };
