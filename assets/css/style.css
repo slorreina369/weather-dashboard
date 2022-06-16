@@ -112,9 +112,9 @@ main{
 }
 .search-history ul{
     padding: 0;
+    list-style-type: none
 }
-.search-history li{
-    list-style-type: none;
+.search-history button{
     background-color: #b7b7b7;
     display: inline-block;
     margin: 8px 0;
@@ -122,4 +122,6 @@ main{
     text-align: center;
     padding: 9px;
     border-radius: 8px;
+    color: var(--first-text-color);
+    border: none;
 }

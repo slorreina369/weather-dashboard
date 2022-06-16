@@ -8,11 +8,7 @@ var weatherIcon = document.querySelector(".weather-icon");
 var cities = [];
 
 // submit buttont to obtain information placed in search button
-var searchCity = function(event){
-
-    
-    var city = getCity.value.trim();
-
+var searchCity = function(city){
     $(weatherNow).find(".current-city").text(city);
     if(city){
         getLoc(city)
@@ -122,11 +118,21 @@ var loadCity = function(){
     };
     for(var i=0; i<cities.length; i++){
         cityHistory = cities[i];
-        var cityLi = $("<li>").text(cityHistory);
+        var cityLi = $("<li>");
+        var historybtn = $("<button>").text(cityHistory);
         $(".search-history > ul").append(cityLi);
+        cityLi.append(historybtn);
 
     }
 }
 
-searchBtn.addEventListener("click", searchCity);
+searchBtn.addEventListener("click", function(){
+    var city = getCity.value.trim();
+    searchCity(city);
+});
+$(".search-history").on("click", "button", function(event){
+    var eventBtn = event.target.innerText
+    searchCity(eventBtn);
+    console.log("button, I win")    
+});
 loadCity();
